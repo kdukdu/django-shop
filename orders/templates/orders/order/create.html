@@ -4,22 +4,33 @@
 {% block title %} Checkout {% endblock %}
 
 {% block content %}
-<h1>Checkout</h1>
-<div class="order-info">
-    <h3>Your order</h3>
-    <ul>
-        {% for item in cart %}
-        <li>
-            {{ item.quantity }}x {{ item.product.name }}
-            <span>${{ item.total_price }}</span>
-        </li>
-        {% endfor %}
-    </ul>
-    <p>Total: ${{ cart.get_total_price }}</p>
+<div class="container">
+    <h1>Checkout</h1>
+    <div class="row">
+        <div class="col-4">
+            <form action="" method="post" class="row">
+                {% csrf_token %}
+                {{form}}
+                <div class="text-end pt-4">
+                    <input type="submit" class="btn btn-primary" value="Place order">
+                </div>
+            </form>
+        </div>
+        <div class="col offset-1">
+            <h3>Your order</h3>
+            <ul>
+                {% for item in cart %}
+                <li>
+                    {{ item.quantity }}x {{ item.product.name }}
+                    <span>${{ item.total_price }}</span>
+                </li>
+                {% endfor %}
+            </ul>
+            <p>
+                <strong>Total:</strong> ${{ cart.get_total_price }}
+            </p>
+        </div>
+    </div>
 </div>
-<form action="" method="post" class="row">
-    {% csrf_token %}
-    {{form.as_p}}
-    <p><input type="submit" value="Place order"></p>
-</form>
+
 {% endblock %}
