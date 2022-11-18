@@ -9,7 +9,9 @@ class Cart:
         """Cart initialization."""
         self.session = request.session
         cart = self.session.get(settings.CART_SESSION_ID)
-        # If session exists cart contains session_id, else None
+        if not cart:
+            self.session[settings.CART_SESSION_ID] = dict()
+            cart = self.session[settings.CART_SESSION_ID]
         self.cart = cart
 
     def add(self, product: Product, quantity=1, update_quantity=False):
@@ -53,7 +55,10 @@ class Cart:
 
     def __len__(self):
         """Counting all items in the cart."""
-        return sum(item['quantity'] for item in self.cart.values())
+        try:
+            return sum(item['quantity'] for item in self.cart.values())
+        except AttributeError:
+            return 0
 
     def get_total_price(self):
         """Calculate the cost of items in the shopping cart."""
