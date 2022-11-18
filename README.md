@@ -7,6 +7,7 @@ functionality:
 - **Django admin panel** - _where you can add, edit, remove products and categories_
 - **Session based cart** -  _which keeps track of the current relationship with the client and allows you to
   add and remove items from the cart_
+- **Order processing**
 - **Filter products by a category**
 
 ## Technology stack
