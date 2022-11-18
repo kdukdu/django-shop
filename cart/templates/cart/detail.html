@@ -51,7 +51,7 @@ Your shopping cart
 
     <p class="text-end" style="padding-right:105px">
         <a href="{% url 'product_list' %}" class="btn btn-secondary">Continue shopping</a>
-        <a href="#" class="btn btn-primary">Checkout</a>
+        <a href="{%url 'order_create'%}" class="btn btn-primary">Checkout</a>
     </p>
 </div>
 {% endblock %}
