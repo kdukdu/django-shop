@@ -19,12 +19,12 @@ from django.urls import path, include
 
 from shop import settings
 
-
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('myshop/', include('myshop.urls')),
     path('cart/', include('cart.urls')),
     path('orders/', include('orders.urls')),
+    path('payments/', include('payments.urls')),
 ]
 
 if settings.DEBUG:
