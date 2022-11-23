@@ -7,7 +7,7 @@ from .models import Order
 
 
 @shared_task
-def order_created(order_id):
+def order_created_task(order_id):
     sleep(20)
     order = Order.objects.get(id=order_id)
     subject = f"Order #{order_id}"

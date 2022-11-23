@@ -5,7 +5,7 @@ from django.urls import reverse
 from cart.cart import Cart
 from orders.forms import OrderCreateForm
 from orders.models import OrderItem, Order
-from orders.tasks import order_created
+from orders.tasks import order_created_task
 
 
 def order_create(request):
@@ -20,7 +20,7 @@ def order_create(request):
                                          price=item['price'],
                                          quantity=item['quantity'])
             cart.clear()
-            order_created.delay(order.id)
+            order_created_task.delay(order.id)
             return HttpResponseRedirect(reverse('order_created', kwargs={'order_id': order.id}))
     else:
         form = OrderCreateForm()
