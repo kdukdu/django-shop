@@ -4,8 +4,19 @@
 {% block title %}Thank you{% endblock %}
 
 {% block content %}
-    <h1>Thank you</h1>
-    <p>Your order has been successfully completed. Your order number is
-        <strong>{{ order.id }}</strong>.
-    </p>
+
+<h1>Thank you</h1>
+{%if not order.paid%}
+<p>Your order has been successfully processed. Your order number is
+    <strong>{{ order.id }}</strong>.
+</p>
+<form action="{%url 'payment_process' order.id%}" method="post">
+    {%csrf_token%}
+    <button class="btn lg btn-primary">Proceed with the payment</button>
+</form>
+
+
+{%else%}
+<p>Your order has been successfully paid. We will be glad to see you in our store next time!</p>
+{%endif%}
 {% endblock %}

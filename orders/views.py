@@ -1,8 +1,10 @@
-from django.shortcuts import render
+from django.http import HttpResponseRedirect
+from django.shortcuts import render, get_object_or_404
+from django.urls import reverse
 
 from cart.cart import Cart
 from orders.forms import OrderCreateForm
-from orders.models import OrderItem
+from orders.models import OrderItem, Order
 from orders.tasks import order_created
 
 
@@ -19,9 +21,14 @@ def order_create(request):
                                          quantity=item['quantity'])
             cart.clear()
             order_created.delay(order.id)
-            return render(request, 'orders/order/created.html', {'order': order})
+            return HttpResponseRedirect(reverse('order_created', kwargs={'order_id': order.id}))
     else:
         form = OrderCreateForm()
 
     return render(request, 'orders/order/create.html',
                   {'cart': cart, 'form': form})
+
+
+def order_created(request, order_id):
+    order = get_object_or_404(Order, id=order_id)
+    return render(request, 'orders/order/created.html', {'order': order})
