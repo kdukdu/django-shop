@@ -121,7 +121,7 @@ stripe listen --forward-to localhost:8000/payments/webhooks/stripe/
 ```
 
 
-##Simulate payments to test Stripe integration
+## Simulate payments to test Stripe integration
 
 To simulate transactions without moving any money you can use special values in test mode.
 
