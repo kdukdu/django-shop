@@ -38,7 +38,7 @@ Your shopping cart
                 <form action="{% url 'cart_add' product.id %}" method="post">
                     {% csrf_token %}
                     {{ item.update_quantity_form.quantity }}
-                    {{ item.update_quantity_form.override }}
+                    {{ item.update_quantity_form.update }}
                     <input class="btn btn-success btn-sm" type="submit" value="Update">
                 </form>
             </td>
