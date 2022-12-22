@@ -42,7 +42,7 @@ Your shopping cart
                     <input class="btn btn-success btn-sm" type="submit" value="Update">
                 </form>
             </td>
-            <td><a href="{% url 'cart_remove' product.id%}">Remove</a></td>
+            <td><a href="{% url 'cart_remove' product.id%}" class="btn btn-secondary">Remove</a></td>
             <td>${{ item.price }}</td>
             <td>${{ item.total_price }}</td>
         </tr>

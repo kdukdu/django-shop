@@ -1,0 +1,17 @@
+header {
+    background-color: #bbff00;
+}
+
+div.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+  font-size: 18px;
+}
+
+div.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  font-size: 18px;
+}

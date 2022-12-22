@@ -1,0 +1,30 @@
+<header class="p-3 mb-3 border-bottom">
+    <div class="container">
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                <li><a href="{%url 'product_list'%}" class="nav-link px-2 link-secondary">My shop</a></li>
+            </ul>
+            {%with total_items=cart|length%}
+            {%if total_items > 0%}
+            <ul class="nav col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+                <li>
+                    <a href="{%url 'cart_detail'%}" class="nav-link px-2 link-secondary">
+                        <i class="fa fa-shopping-cart" style="font-size:24px"></i>
+                        {{total_items}} item{{total_items|pluralize}}, ${{cart.get_total_price}}
+                    </a>
+                </li>
+            </ul>
+            {%else%}
+            <ul class="nav col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+                <li>
+                    <a class="nav-link px-2 link-secondary">
+                    <i class="fa fa-shopping-cart" style="font-size:24px"></i>
+                    Your cart is empty.
+                    </a>
+                </li>
+            </ul>
+            {%endif%}
+            {%endwith%}
+        </div>
+    </div>
+</header>

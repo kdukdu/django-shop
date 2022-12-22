@@ -1,0 +1,21 @@
+<div class="flex-shrink-0 p-3 bg-white">
+    <a href="{%url 'product_list'%}" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
+        <span class="fs-5 fw-semibold">MY SHOP</span>
+    </a>
+    <ul class="list-unstyled ps-0">
+        <li class="mb-2">
+            <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
+                    data-bs-target="#dashboard-collapse" aria-expanded="false">
+                Categories
+            </button>
+            <div class="collapse" id="dashboard-collapse" style="">
+                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small" style="padding-left:20px;">
+                    <li><a href="{% url 'product_list' %}" class="link-dark rounded">All</a></li>
+                    {% for category in categories %}
+                    <li><a href="{{ category.get_absolute_url }}" class="link-dark rounded">{{ category.name }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </li>
+    </ul>
+</div>
