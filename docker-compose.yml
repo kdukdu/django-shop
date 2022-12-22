@@ -1,0 +1,41 @@
+version: '3'
+
+
+services:
+  app:
+    build: .
+    command: python /app/manage.py runserver 0.0.0.0:8000
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    env_file:
+      - .env
+    depends_on:
+      - migrate
+
+  migrate:
+    build: .
+    command: python manage.py migrate
+    volumes:
+      - .:/app
+
+  redis:
+    image: redis:alpine
+
+  celery:
+    build: .
+    ports:
+      - "6379:6379"
+    command: celery -A shop worker -l info --without-gossip -P solo
+    volumes:
+      - .:/app
+    depends_on:
+      - redis
+
+  stripe-cli:
+    image: stripe/stripe-cli
+    network_mode: host
+    command: listen --api-key ${STRIPE_SECRET_KEY} --forward-to localhost:8000/payments/webhooks/stripe/
+    env_file:
+      - .env
