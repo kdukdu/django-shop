@@ -12,21 +12,30 @@
 
 ## Introduction  
   
-"Shop" is an application based on Python using the Django framework. It implements the following  
+"Shop" is an application based on Python using the Django framework. It implements the following 
 functionality:  
-  
-- **Django admin panel** - _where you can add, edit, remove products and categories_  
-- **Session based cart** -  _which keeps track of the current relationship with the client and allows you to  
-  add and remove items from the cart_  
-- **Order processing**  
-- **Filter products by a category**  
 
+### Django admin panel
+You can add, edit, remove products and categories. Also, you can get information about customer's orders.
+Admin panel located at <a href="localhost:8000/admin">localhost:8000/admin</a>
+
+### Session based cart
+Keeps track of the current relationship with the client and allows you to add and remove items from the cart.  
+
+### Order processing and payment 
+We can easily test this online-store with using Stripe API. You can use the Stripe API in test mode,
+which doesn't affect your live data or interact with the banking networks.
+
+### Running asynchronous tasks in an application
+With the help of Celery, we created an asynchronous task. Also, Celery requires a message broker
+to process requests. For this purpose, we used Redis as is an in-memory data store that can be used
+as either a high-performance key-value store or as a message broker.
 
 ## Technology stack  
 - Python 3.8  
 - Django 4.1  
-- Celery  
-- Redis  
+- Celery
+- Redis
 - Stripe API  
 - SQLite3
 - Bootstrap 5
@@ -76,7 +85,7 @@ Where <container_id> is shop-app container id
 
 ## Simulate payments to test Stripe integration
 
-To simulate transactions without moving any money you can use special values in test mode.
+To simulate success transactions without moving any money you can use special values in test mode.
 
 >Use the card number: 4242 4242 4242 4242
 > 
