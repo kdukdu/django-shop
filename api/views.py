@@ -1,14 +1,20 @@
 from rest_framework import viewsets
 
 from api.permissions import IsAdminOrReadOnly
-from api.serializers import ProductSerializer
-from myshop.models import Product
+from api.serializers import ProductSerializer, CategorySerializer
+from myshop.models import Product, Category
 
 
 class ProductViewSet(viewsets.ModelViewSet):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
     permission_classes = (IsAdminOrReadOnly,)
+
+
+class CategoryViewSet(viewsets.ModelViewSet):
+    queryset = Category.objects.all()
+    serializer_class = CategorySerializer
+    permission_classes = (IsAdminOrReadOnly, )
 
 
 # class ProductApiView(generics.ListAPIView):
