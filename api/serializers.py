@@ -7,7 +7,8 @@ from myshop.models import Product
 class ProductSerializer(serializers.ModelSerializer):
     class Meta:
         model = Product
-        fields = ('name', 'image', 'description', 'price', 'stock', 'available', 'category')
+        fields = "__all__"
+        read_only = ('slug', 'created', 'updated')
 
     def create(self, validated_data):
         validated_data['slug'] = slugify(validated_data.get('name'))
