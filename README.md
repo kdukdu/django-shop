@@ -54,7 +54,7 @@ git clone https://github.com/KirylDumanski/Shop.git
 ### Get your own Stripe keys.
 1. Head into [Stripe dashboard](https://dashboard.stripe.com/login?redirect=%2Ftest%2Fapikeys) and grab your API keys (public key and secret key).  
   
-2. Copy API keys and paste them into ```.env```:  
+2. Copy API keys and paste them into `.env`:  
 ```  
 STRIPE_PUBLIC_KEY = "<YOUR_OWN_PUBLIC_KEY>"  
 STRIPE_SECRET_KEY = "<YOUR_OWN_SECRET_KEY>"  
@@ -63,7 +63,8 @@ STRIPE_SECRET_KEY = "<YOUR_OWN_SECRET_KEY>"
 ```
 docker-compose up stripe-cli
 ```
-4. Look in the logs for the message from stripe-cli where will be your own webhook secret code. Take that key and paste it into ``.env``:  
+4. Look in the logs for the message from stripe-cli where will be your own webhook secret code.
+Take that key and paste it into `.env`:  
 ```
 STRIPE_WEBHOOK_SECRET = "<whsec_YOUR_OWN_WEBHOOK_SECRET_KEY>"  
 ```
@@ -74,7 +75,7 @@ STRIPE_WEBHOOK_SECRET = "<whsec_YOUR_OWN_WEBHOOK_SECRET_KEY>"
 ```
 docker-compose up
 ```
-This should start up the application at port 8000. The application can be accessed at http://localhost:8080
+This should start up the application at port 8000. The application can be accessed at http://localhost:8000
 
 2. To create a superuser run the following command:
 ```
