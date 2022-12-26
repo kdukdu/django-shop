@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.conf.urls.static import static
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path, include, re_path
 
 from shop import settings
 
@@ -25,7 +25,11 @@ urlpatterns = [
     path('cart/', include('cart.urls')),
     path('orders/', include('orders.urls')),
     path('payments/', include('payments.urls')),
-    path('api/v1/', include('api.urls'))
+    path('api/v1/', include('api.urls')),
+    path('api/v1/auth/', include('rest_framework.urls')),
+    re_path(r'^auth/', include('djoser.urls')),
+    re_path(r'^auth/', include('djoser.urls.authtoken')),
+
 ]
 
 if settings.DEBUG:
