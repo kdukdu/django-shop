@@ -1,0 +1,178 @@
+[
+{
+  "model": "myshop.category",
+  "pk": 1,
+  "fields": {
+    "name": "Tea",
+    "slug": "tea"
+  }
+},
+{
+  "model": "myshop.category",
+  "pk": 5,
+  "fields": {
+    "name": "Coffee",
+    "slug": "coffee"
+  }
+},
+{
+  "model": "myshop.product",
+  "pk": 7,
+  "fields": {
+    "category": 1,
+    "name": "Ceremonial Matcha Gift Set",
+    "slug": "ceremonial-matcha-gift-set",
+    "image": "products/2022/12/25/20210308_AOT__AudreyMa0053-Edit_1200x1.jpg",
+    "description": "The Art of Tea Ceremonial Matcha Gift Set has everything you need to prepare a delicious cup of matcha at home. This bundle contains all of the tools and tea necessary to help you master a contemporary matcha ceremony.\r\n\r\nThe Ceremonial Matcha Gift Set includes:\r\n- Handblown double-walled glass bowl\r\n- Signature chasen bamboo matcha whisk\r\n- Bamboo matcha measuring spoon\r\n- Matte black matcha whisk holder\r\n- 40-gram Ceremonial Matcha tin\r\n\r\nOur organic Ceremonial Grade Matcha has been ground and packed at origin in Japan to lock in the ultimate freshness and highest quality. A blend of 3 different green tea varietals, our Ceremonial Grade Matcha is truly remarkable and is delicious hot or cold brewed. With light, refreshing, and smooth tasting notes, this Matcha is certain to delight all of your senses.\r\n\r\nPerfect for a gift or for yourself, shop our Ceremonial Matcha Gift Set today!",
+    "price": "54.99",
+    "stock": 21,
+    "available": true,
+    "created": "2022-12-25T11:08:07.630Z",
+    "updated": "2022-12-25T11:08:07.630Z"
+  }
+},
+{
+  "model": "myshop.product",
+  "pk": 8,
+  "fields": {
+    "category": 1,
+    "name": "Art of Tea Ceremonial Grade Matcha Tin",
+    "slug": "art-of-tea-ceremonial-grade-matcha-tin",
+    "image": "products/2022/12/25/20210308_AOT__AudreyMa0058_1200x1.jpg",
+    "description": "Our organic Ceremonial Grade Matcha has been ground and packed at origin in Japan to lock in ultimate freshness. A blend of 3 different green tea varietals, our Ceremonial Grade Matcha is delicious hot or cold brewed. With a light, refreshing, and smooth flavor profile, our Ceremonial Grade Matcha doesn't need anything more than filtered water for a truly sublime brew. Elevate your matcha ritual today.",
+    "price": "32.00",
+    "stock": 15,
+    "available": true,
+    "created": "2022-12-25T11:11:00.259Z",
+    "updated": "2022-12-25T11:11:00.260Z"
+  }
+},
+{
+  "model": "myshop.product",
+  "pk": 9,
+  "fields": {
+    "category": 1,
+    "name": "Caffeine Free 50 Count Teabag Sachet Assortment",
+    "slug": "caffeine-free-50-count-teabag-sachet-assortment",
+    "image": "products/2022/12/25/AssortedCaffeineFreePTSachet_1200x1.jpg",
+    "description": "The Caffeine Free 50-count teabag sachet assortment contains the following sachets*:\r\n\r\n- Apricot Escape (10)\r\n- Pacific Coast Mint  (10)\r\n- Bright Eyed  (10)\r\n- Egyptian Chamomile (10)\r\n- French Lemon Ginger  (10)\r\n\r\n*Flavors and amounts are subject to change based on product availability.",
+    "price": "48.00",
+    "stock": 16,
+    "available": true,
+    "created": "2022-12-25T11:12:36.012Z",
+    "updated": "2022-12-25T11:12:36.012Z"
+  }
+},
+{
+  "model": "myshop.product",
+  "pk": 10,
+  "fields": {
+    "category": 1,
+    "name": "Crème Brûlée",
+    "slug": "creme-brulee",
+    "image": "products/2022/12/25/9_00PM_143d81a0-c53f-4794-962c-4768236404f0_1200x1.jpg",
+    "description": "Formerly known as 9:00 PM, Crème Brûlée is a naturally sweet brew. As per SPY.com, this caffeine-free rooibos blend is 'the ultimate treat before bed when you’re craving something yummy but don’t want to go to sleep on a full stomach.' Add a splash of milk and sweetener for an even more indulgent sip that is equally delicious hot as it is iced.",
+    "price": "66.00",
+    "stock": 24,
+    "available": true,
+    "created": "2022-12-25T11:13:29.524Z",
+    "updated": "2022-12-25T11:13:29.524Z"
+  }
+},
+{
+  "model": "myshop.product",
+  "pk": 11,
+  "fields": {
+    "category": 1,
+    "name": "Tea Infuser",
+    "slug": "tea-infuser",
+    "image": "products/2022/12/25/tea_steeper_1200x1.jpg",
+    "description": "Enjoy your favorite loose leaf tea in our stainless steel Tea Infuser. This spacious infuser allows for maximum flavor extraction while ensuring that all tea particles are contained within the basket and not floating in your cup. The infuser fits most tea kettles, mugs, and cups, making it the perfect complement to your tea ritual.",
+    "price": "24.00",
+    "stock": 5,
+    "available": true,
+    "created": "2022-12-25T11:14:06.462Z",
+    "updated": "2022-12-25T11:14:06.462Z"
+  }
+},
+{
+  "model": "myshop.product",
+  "pk": 12,
+  "fields": {
+    "category": 1,
+    "name": "Vanilla Berry Truffle Tea",
+    "slug": "vanilla-berry-truffle-tea",
+    "image": "products/2022/12/25/VANILLA_BERRY_TRUFFLE_1200x1.jpg",
+    "description": "This vanilla rooibos tea is a delectable infusion of enticingly sweet and tangy flavors harmoniously complimented by the soothing smoothness of fresh cream. Our Vanilla Berry Truffle tea is an enjoyable dessert blend at any time of day.\r\n\r\nThis product contains the following allergenic ingredient(s): chocolate, egg, milk, soy lecithin",
+    "price": "69.00",
+    "stock": 17,
+    "available": true,
+    "created": "2022-12-25T11:14:46.722Z",
+    "updated": "2022-12-25T11:14:46.722Z"
+  }
+},
+{
+  "model": "myshop.product",
+  "pk": 13,
+  "fields": {
+    "category": 1,
+    "name": "Caramelized Pear Tea",
+    "slug": "caramelized-pear-tea",
+    "image": "products/2022/12/25/CARAMELIZED_PEAR_1200x1.jpg",
+    "description": "A delectable dessert infusion with sweet and flavorful notes of honey, caramel, and fresh-baked pear. This rooibos tea brews a well-rounded cup.",
+    "price": "69.00",
+    "stock": 9,
+    "available": true,
+    "created": "2022-12-25T11:15:45.522Z",
+    "updated": "2022-12-25T11:15:45.522Z"
+  }
+},
+{
+  "model": "myshop.product",
+  "pk": 14,
+  "fields": {
+    "category": 1,
+    "name": "White Winter Chai Tea",
+    "slug": "white-winter-chai-tea",
+    "image": "products/2022/12/25/WHITE_WINTER_CHAI_1200x1.jpg",
+    "description": "A spicy white tea infusion, White Winter Chai is a festive take on your favorite chai tea. Cozy up with this smooth and savory brew.",
+    "price": "34.00",
+    "stock": 24,
+    "available": true,
+    "created": "2022-12-25T11:16:34.606Z",
+    "updated": "2022-12-25T11:16:34.606Z"
+  }
+},
+{
+  "model": "myshop.product",
+  "pk": 15,
+  "fields": {
+    "category": 5,
+    "name": "Espresso Barista",
+    "slug": "espresso-barista",
+    "image": "products/2022/12/25/104455_-_kimbo_-_espresso_barista_1000g_bohnen1.jpg",
+    "description": "The Espresso Barista from Kimbo consists of 100 % Arabica beans. The composition is made up of natural Arabica beans of the variety Brasile Santos and washed Arabica beans Colombia Exelso and Rwanda Ordinary. The high-quality beans are defined by their full body with intense aromas and have a strong character. The interplay of great aromas and impressive intensity is perfected by the finest floral, sweet nuances and delicate acids.\r\n\r\n- 100 % noble Arabica beans\r\n- Fine acidity and full-bodied flavor\r\n- Floral aromas and delicate sweetness\r\n\r\nThe aftertaste holds exciting notes of toasted bread in store for you and ensures a long-lasting taste experience. The Espresso Barista is a true all-rounder and, in addition to preparation as a classic espresso, is also ideal for coffee specialties with milk such as cappuccino or latte macchiato. A great espresso for every home barista and those who want to become one !",
+    "price": "28.00",
+    "stock": 12,
+    "available": true,
+    "created": "2022-12-25T11:19:20.719Z",
+    "updated": "2022-12-25T11:19:20.720Z"
+  }
+},
+{
+  "model": "myshop.product",
+  "pk": 16,
+  "fields": {
+    "category": 5,
+    "name": "Brazil Cemorrado",
+    "slug": "brazil-cemorrado",
+    "image": "products/2022/12/25/103997-azul_kaffee_-_brazil_cemorrado_250g_bohnen800x8001.jpg",
+    "description": "Brasilien ist ein Land mit einer Kaffeeanbautradition, die bereits über 150 beeindruckende Jahre alt ist. Diese Tradition hat sich die Azul Rösterei zu Nutze gemacht um mit dem Cemorrado einen Filterkaffee zu schaffen, der mit besonders ausgeprägten Mandel- und Haselnussnoten begeistert. Die ausgewählten Bohnen aus der Region Cerrado im Südosten Brasiliens verleihen dem Kaffee außerdem Nuancen von Honig und Milchschokolade.\r\n\r\nAufwendiges Cupping\r\nUm die richtigen Bohnen für diesen Kaffee zu finden, der schließlich den Namen Cemorrado erhielt, war ein intensives Cupping von Nöten. Das Ergebnis in der Tasse ist ein hervorragender Filterkaffee, der sich für jeden Tag und jede Gelegenheit eignet.",
+    "price": "18.00",
+    "stock": 28,
+    "available": true,
+    "created": "2022-12-25T11:20:43.397Z",
+    "updated": "2022-12-25T11:20:43.397Z"
+  }
+}
+]
