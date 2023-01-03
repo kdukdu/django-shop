@@ -55,7 +55,7 @@ our application using the HTTP methods - GET, POST, PUT, PATCH, DELETE.
 ## Installation Guide  
 1. Clone git repository:
 ```  
-git clone https://github.com/KirylDumanski/Shop.git  
+https://github.com/KirylDumanski/django-shop.git
 ``` 
 
 2. Rename `.env.dist` to `.env` and [inject your own credentials](#injecting-your-own-credentials)
